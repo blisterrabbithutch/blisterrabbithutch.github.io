@@ -1,0 +1,20 @@
+.title {
+  font-family: HelveticaNeue-CondensedBold;
+  margin: 33px 0 6px 0;
+  font-size: 32px;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 44px;
+  display: inline-block; }
+
+.subtitle {
+  font-family: HelveticaNeue-CondensedBold;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-top: 49px;
+  padding-bottom: 10px;
+  margin-bottom: 0; }

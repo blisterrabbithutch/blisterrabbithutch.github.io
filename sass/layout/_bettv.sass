@@ -1,0 +1,53 @@
+.betTv
+  background: url("../img/betTv-background.jpg") center 593px
+  background-size: cover
+  &-header
+    display: flex
+    justify-content: space-between
+    border-bottom: 2px solid rgba(255,255,255, 0.06)
+  &-tabs
+    display: inline-block
+    vertical-align: middle
+    margin-right: 220px;
+  &-tabItem
+    opacity: 0.6;
+    font-family: HelveticaNeue-Medium;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 16px;
+    text-decoration: none
+    margin-top: 55px
+    margin-left: 25px;
+    display: inline-block
+  &-grid
+    padding-top: 32px
+    padding-bottom: 33px
+    text-align: center
+  &-title
+    display: inline-block
+    vertical-align: top
+    margin: 0
+  &-wrapper
+    +mixinContainer
+  &-logo
+    display: inline-block
+    vertical-align: top
+    margin-top: 32px
+    margin-left: 104px
+    margin-bottom: 16px
+  &Item
+    width: 544px
+    display: inline-block
+    vertical-align: top
+    &:first-child
+      margin-right: 33px 
+    &-title
+      margin-top: 9px
+      text-align: left
+      font-family: HelveticaNeue-Bold
+      font-size: 24px
+      color: #FFFFFF
+      letter-spacing: 0
+      line-height: 33px
+  

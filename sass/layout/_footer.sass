@@ -1,0 +1,58 @@
+.footer
+  background: black
+  color: white
+  &-logo
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      top: -3px
+      left: -35px
+      right: 0
+      width: 30px
+      height: 30px
+      background: url(../img/company-logo.png) no-repeat
+  &-wrapper
+    +mixinContainer
+  &-disclaimer
+    color: #D8D8D8
+    opacity: 0.4
+    font-family: HelveticaNeue-Medium
+    font-size: 13px
+    letter-spacing: 0
+    line-height: 18px
+    margin-top: 22px
+    margin-left: 100px
+    margin-bottom: 22px
+    width: 1100px
+  &-copyright
+    opacity: 0.2
+    font-family: HelveticaNeue-Medium
+    font-size: 13px
+    color: #FFFFFF
+    margin-left: 100px
+    letter-spacing: 0
+    line-height: 18px
+    color: #D8D8D8
+    padding-bottom: 44px
+    display: block
+  &-navigation
+    padding-top: 37px
+    padding-bottom: 33px
+    padding-left: 140px
+    border-bottom: 2px solid rgba(255,255,255, 0.06)
+    &Item
+      display: inline-block
+      vertical-align: top
+      width: 180px;
+      margin-right: 14px;
+      &Title
+        font-family: HelveticaNeue-Bold
+        font-size: 13px
+        letter-spacing: 0.4px
+        line-height: 18px
+        margin-bottom: 27px
+        text-transform: uppercase
+        
+  
+    
