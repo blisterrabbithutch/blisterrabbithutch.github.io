@@ -15,6 +15,8 @@ var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var run = require("run-sequence");
 var mqpacker = require("css-mqpacker");
+var compiler = require('webpack');
+var webpack = require('webpack-stream');
 
 gulp.task("build", function(fn) {
     run("clean", "copy", "style", "images", fn);
@@ -36,15 +38,39 @@ gulp.task("copy", function() {
         .pipe(gulp.dest("build"));
 });
 
-// gulp.task('sass', function () {
-//   return gulp.src('./sass/**/*.sass')
-//     .pipe(sass().on('error', sass.logError))
-//     .pipe(gulp.dest('./css'));
-// });
- 
-// gulp.task('sass:watch', function () {
-//   gulp.watch('./sass/**/*.sass', ['sass']);
-// });
+gulp.task('webpack-build', function() {
+    return gulp.src('js/entry.js')
+        .pipe(webpack({
+            output: {
+                filename: 'main.js'
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.m?js$/,
+                        exclude: /(node_modules|bower_components)/,
+                        use: {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: ['@babel/preset-env']
+                            }
+                        }
+                    }
+                ]
+            },
+            optimization: {
+                minimize: false
+            }
+        }, compiler, function(err, stats) {
+            /* Use stats to do more things if needed */
+        }))
+        .on('error', function (err) {
+            console.log(err.toString());
+
+            this.emit('end');
+        })
+        .pipe(gulp.dest('dist/'));
+});
 
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.sass')
@@ -55,12 +81,6 @@ gulp.task('sass', function () {
                 sort: true
             })
         ))
-        // .pipe(postcss([
-        //     autoprefixer({
-        //         browsers: ["last 2 versions"]
-        //     })
-        // ]))
-        // .pipe(autoprefixer())
         .pipe(gulp.dest("css"))
         .pipe(server.stream())
         .pipe(minify())
@@ -124,6 +144,8 @@ gulp.task("serve", function() {
 
     gulp.watch('./sass/**/*.sass', ['sass']);
     gulp.watch("sass/**/*.sass", ["sass"]);
+    gulp.watch(['js/**/*.js'], ['webpack-build']);
+    gulp.watch(['js/*.js'], ['webpack-build']);
     gulp.watch("img/*.svg").on("change", server.reload);
     gulp.watch("*.html", ["html:update"]);
 });

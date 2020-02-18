@@ -1,0 +1,91 @@
+.hamburger-wrapper
+	overflow: hidden
+	cursor: pointer
+	background: #fade70
+	border-radius: 50%
+	transition: all 0.5s ease-in-out
+	width: 4vw
+	height: 4vw
+	display: flex
+	justify-content: center
+	align-items: center
+	&:hover
+		background: $black
+		li
+			background: $white
+
+	&.checked
+		background: $black
+		li
+			background: $white
+		.hamburger
+			margin-top: 0
+	
+.hamburger
+	list-style: none
+	float: left
+	margin: 0
+	margin-top: -5px
+	//padding: 20px 20px 24px 20px
+	padding: 0
+	position: relative
+	transition: all 233ms cubic-bezier(0.5, 0, 0, 1)
+	
+
+	li
+		//width: 28px
+		width: 1.8vw
+		height: 2px
+		background: $black
+		margin: 6px 0 0
+		padding: 0
+		transform: translate3d(0, 0, 0)
+		transition: all 333ms cubic-bezier(0.5, 0, 0, 1)
+		&:first-child
+			//margin-top: 4px
+
+.checked
+	.hamburger
+		li.first
+			transform: rotate(-135deg) translateY(-6px) translateX(-6px)
+			margin-top: 0
+		li.second
+			opacity: 0
+		li.third
+			//transform: rotate( 135deg ) translateY( 4.5px ) translateX(-5.5px)
+			transform: rotate( 135deg ) translateY( 5px ) translateX(-5.3px)
+
+
+@media (min-width: $tablet-widths-only-min) and (max-width: $tablet-widths-only-max)
+	.hamburger
+		li
+			width: 15px
+			margin: 3px 0 0 0
+		&-wrapper
+			padding-top: 2px
+			width: 35px
+			height: 35px
+			&.checked
+				li
+					margin-top: 5px
+					&.first
+						transform: rotate(-135deg) translateY(-5px) translateX(-5px)
+
+@media (max-width: $mobile-widths-only)
+	.hamburger
+		margin-top: -4px
+		li
+			width: 13px
+			margin: 3px 0 0 0
+			height: 1px
+		&-wrapper
+			padding-top: 2px
+			width: 29px
+			height: 29px
+			&.checked
+				.hamburger
+					margin-top: 1px
+				li
+					margin-top: 5px
+					&.first
+						transform: rotate(-135deg) translateY(-3.6px) translateX(-3.5px)

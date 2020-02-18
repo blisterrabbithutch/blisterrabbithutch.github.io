@@ -445,3 +445,14 @@ template {
 [hidden] {
   display: none;
 }
+
+/* custom jossicssreset safari mobile */
+
+input, textarea {
+  border-radius: 0;
+  -webkit-border-radius:0px;
+}
+input {
+  -webkit-appearance: none;
+}
+html {-webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}

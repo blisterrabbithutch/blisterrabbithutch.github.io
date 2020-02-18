@@ -1,0 +1,95 @@
+.business-card
+	width: 620px
+	//height: 250px
+	box-shadow: -30px 17px 68px -17px rgba(0,0,0,0.33)
+	padding: 40px 40px
+	background: white
+	background: linear-gradient(53deg, rgba(231,231,231,1) 0%, rgba(255,255,255,1) 100%)
+	display: flex
+	flex-wrap: wrap
+	&__age
+		font-size: 14px
+		line-height: 18px
+		text-transform: none
+		display: block
+		margin-left: 10px
+	&__name
+		color: transparent
+		-webkit-text-stroke-width: 1px
+		-webkit-text-stroke-color: black
+		display: block
+	&__surname
+		display: block
+		margin-left: 5px
+	&__title
+		margin: 0
+		text-transform: uppercase
+		font-weight: 600
+		margin-bottom: 10px
+		padding-bottom: 10px
+		font-size: 34px
+		line-height: 34px
+		position: relative
+		font-family: "Oswald", sans-serif
+		width: 100%
+		display: flex
+		align-items: flex-end
+		&:after
+			content: ""
+			left: 0
+			bottom: 0
+			width: 32px
+			height: 2px
+			position: absolute
+			background: black
+		&-section
+			width: 100%
+			margin-bottom: 20px
+
+
+	&__subtitle
+		font-size: 14px
+		margin: 0
+		font-weight: 500
+		width: 250px
+	&__info
+		&-section
+			width: 190px
+			margin-left: auto
+		&-item
+			color: inherit
+			text-decoration: none
+			display: flex
+			padding: 0
+			cursor: pointer
+			background: none
+			border: none
+			font-family: "Montserrat", sans-serif
+			&--faded
+				span
+					opacity: 0
+			&:not(:last-child)
+				margin-bottom: 5px
+			&-icon
+				margin-top: 1px
+				width: 20px
+				height: 20px
+				display: block
+				margin-right: 10px
+			&-title
+				font-size: 11px
+				transition: all 0.5s ease-in-out
+
+@media (max-width: 768px)
+	.business-card
+		margin-left: 15px
+		margin-right: 15px
+
+@media (max-width: 400px)
+	.business-card
+		padding: 20px
+		&__subtitle
+			width: auto
+		&__info-section
+			margin-left: 0
+		&__title

@@ -2,18 +2,56 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Index</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+	<title>Business Card Page</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/formalize.css" />
 	<link rel="stylesheet" href="css/style.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<section class="container">Привет</section>
-	<script
-	src="https://code.jquery.com/jquery-2.2.4.min.js"
-	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-	crossorigin="anonymous"></script>
-	<script src="js/script.js"></script>
+<main>
+	<div class="page-wrapper">
+		<div class="business-card">
+			<div class="business-card__title-section">
+				<h1 class="business-card__title">
+					<span class="business-card__name">Denis </span> <span class="business-card__surname">Chizh </span> <span class="business-card__age">25 y/o</span>
+				</h1>
+				<h2 class="business-card__subtitle">
+					Web Developer, UX/UI Designer, Video&nbsp;Montager, Musician
+				</h2>
+			</div>
+			<div class="business-card__info-section">
+				<a href="https://goo.gl/maps/bH9bY6s6VJqxCKcN7" target="_blank" class="business-card__info-item">
+					<img src="img/icon-pin.svg" alt="" class="business-card__info-item-icon">
+					<span class="business-card__info-item-title">
+						Russia, Chelyabinsk, Engels&nbsp;street 51, apt. 26
+					</span>
+				</a>
+				<a href="https://www.instagram.com/denis__chizh/" target="_blank" class="business-card__info-item">
+					<img src="img/icon-instagram.svg" alt="" class="business-card__info-item-icon">
+					<span class="business-card__info-item-title">
+						Instagram Profile
+					</span>
+				</a>
+				<a href="mailto:denischizh.web@gmail.com" class="business-card__info-item">
+					<img src="img/icon-mail.svg" alt="" class="business-card__info-item-icon">
+					<span class="business-card__info-item-title">
+						denischizh.web@gmail.com
+					</span>
+				</a>
+				<a href="tel:+79226993558" data-opened="false" data-number="+7 (922) 699-35-58" class="business-card__info-item business-card__info-item--phone">
+					<img src="img/icon-phone.svg" alt="" class="business-card__info-item-icon">
+					<span class="business-card__info-item-title">
+						Show Phone Number
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</main>
+<script	src="js/jquery-2.2.4.min.js"></script>
+<script src="dist/main.js"></script>
 </body>
 </html>

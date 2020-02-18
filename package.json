@@ -4,12 +4,15 @@
   "description": "",
   "main": "gulpfile.js",
   "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "6.7.x",
+    "babel-loader": "^8.0.4",
     "browser-sync": "2.18.12",
     "css-mqpacker": "^6.0.1",
     "del": "^3.0.0",
-    "gulp": "3.9.1",
+    "gulp": "^3.9.1",
     "gulp-csso": "^3.0.0",
     "gulp-imagemin": "^3.3.0",
     "gulp-less": "3.3.0",
@@ -21,11 +24,16 @@
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^3.0.0",
     "load-gulp-tasks": "^0.1.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-stream": "^5.1.1"
   },
   "scripts": {
     "test": "editorconfig-cli",
     "build": "gulp build",
+    "webpack-watch": "webpack",
     "start": "npm run build && gulp serve"
   },
   "editorconfig-cli": [

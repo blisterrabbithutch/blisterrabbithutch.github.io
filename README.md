@@ -1,1 +1,1 @@
-# blisterrabbithutch.github.io
+# Babel, module JS, Webpack, Gulp, SASS. Watcher on gulp serve 
