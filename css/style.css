@@ -113,6 +113,9 @@ body {
   background: #e3e3e3;
   background: linear-gradient(53deg, #e3e3e3 0%, #f7f7f7 100%); }
 
+main {
+  display: flex; }
+
 * {
   box-sizing: border-box; }
 
