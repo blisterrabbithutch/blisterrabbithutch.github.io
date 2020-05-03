@@ -260,13 +260,18 @@ body {
 
 @media (max-width: 640px) {
   body {
-    font-size: 14px; }
+    font-size: 14px;
+    background: white; }
   .page-wrapper {
     padding-top: 0;
     padding-bottom: 0; }
   .business-card {
     width: 100%;
-    padding: 20px 30px; }
+    padding: 20px 30px;
+    position: relative;
+    z-index: 2;
+    background: white;
+    color: black; }
   .business-card__title {
     line-height: 1;
     margin-bottom: 10px; }
