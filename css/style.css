@@ -141,6 +141,33 @@ main {
   display: flex;
   flex-wrap: wrap; }
 
+.business-card--ru .business-card__content-section--en {
+  display: none; }
+
+.business-card--en .business-card__content-section--ru {
+  display: none; }
+
+.business-card__language-section {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -25px;
+  left: 5px; }
+
+.business-card__language-button {
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  font-family: inherit;
+  border: none;
+  border-bottom: 1px solid transparent; }
+
+.business-card__language-button--active {
+  border-color: black; }
+
+.business-card__language-button:not(:last-child) {
+  margin-right: 10px; }
+
 .business-card__surname {
   color: transparent;
   -webkit-text-stroke-width: 1px;
@@ -160,6 +187,9 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+
+.business-card__title-section {
+  position: relative; }
 
 .business-card__sphere {
   font-size: 20px;
@@ -241,6 +271,10 @@ main {
   .business-card {
     width: calc(100% - 60px);
     padding: 40px 60px; }
+  .business-card__language-section {
+    margin-bottom: 10px;
+    position: relative;
+    top: 0; }
   .business-card__title-block {
     flex-direction: column;
     align-items: flex-start; }

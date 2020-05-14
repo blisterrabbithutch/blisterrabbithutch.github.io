@@ -7,6 +7,33 @@
 	background: linear-gradient(53deg, rgb(245, 245, 245) 0%, rgba(255,255,255,1) 100%)
 	display: flex
 	flex-wrap: wrap
+	&--ru
+		.business-card__content-section
+			&--en
+				display: none
+	&--en
+		.business-card__content-section
+			&--ru
+				display: none
+	&__language
+		&-section
+			display: flex
+			align-items: center
+			position: absolute
+			top: -25px
+			left: 5px
+		&-button
+			padding: 0
+			cursor: pointer
+			background: none
+			font-family: inherit
+			border: none
+			//transition: all 0.3s ease-in-out
+			border-bottom: 1px solid transparent
+			&--active
+				border-color: $black
+			&:not(:last-child)
+				margin-right: 10px
 	&__surname
 		color: transparent
 		-webkit-text-stroke-width: 1px
@@ -24,6 +51,8 @@
 			display: flex
 			justify-content: space-between
 			align-items: center
+		&-section
+			position: relative
 	&__sphere
 		font-size: 20px
 		margin-top: 0
@@ -94,6 +123,10 @@
 	.business-card
 		width: calc(100% - 60px)
 		padding: 40px 60px
+		&__language-section
+			margin-bottom: 10px
+			position: relative
+			top: 0
 		&__title
 			&-block
 				flex-direction: column
